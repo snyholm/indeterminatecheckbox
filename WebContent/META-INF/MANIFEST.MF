@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: IndeterminateCheckBox
+Implementation-Version: 1.0.0
+Vaadin-Widgetsets: com.vaadin.sebastian.indeterminatecheckbox.Indeterm
+ inateCheckboxWidgetSet
+Vaadin-Package-Version: 1
+Class-Path: 
+
