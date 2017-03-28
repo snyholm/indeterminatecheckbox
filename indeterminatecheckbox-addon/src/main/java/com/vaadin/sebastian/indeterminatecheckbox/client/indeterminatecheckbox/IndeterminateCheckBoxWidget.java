@@ -1,7 +1,6 @@
 package com.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox;
 
 import com.google.gwt.core.client.Scheduler;
-import com.google.gwt.core.client.Scheduler.ScheduledCommand;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.InputElement;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
@@ -29,11 +28,12 @@ public class IndeterminateCheckBoxWidget extends CheckBox implements
 
     public Icon icon;
 
-    private InputElement input;
+    private final InputElement input;
 
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public IndeterminateCheckBoxWidget() {
         sinkEvents(VTooltip.TOOLTIP_EVENTS | Event.MOUSEEVENTS);
-        Event.addNativePreviewHandler(this);
+        Event.addNativePreviewHandler(IndeterminateCheckBoxWidget.this);
 
         input = (InputElement) getElement().getFirstChildElement();
     }
@@ -87,7 +87,7 @@ public class IndeterminateCheckBoxWidget extends CheckBox implements
 
     private native boolean isValoTheme(Element element)/*-{
                                                        var property = window.getComputedStyle(element, ':after').getPropertyValue('font-family');
-                                                       return (property.indexOf("ThemeIcons") > -1) || (property.indexOf("FontAwesome") > -1);   
+                                                       return (property.indexOf("ThemeIcons") > -1) || (property.indexOf("FontAwesome") > -1);
                                                        }-*/;
 
     public void addOrRemoveValoStyleIfValo(boolean isIndeterminate) {
@@ -114,7 +114,7 @@ public class IndeterminateCheckBoxWidget extends CheckBox implements
 
         boolean isWidgetClicked = (event.getTypeInt() == Event.ONCLICK)
                 && (target == getElement() || target == input
-                        || target == input.getNextSibling());
+                || target == input.getNextSibling());
 
         if (isWidgetClicked && !ignoreEvent) {
 
@@ -123,12 +123,8 @@ public class IndeterminateCheckBoxWidget extends CheckBox implements
 
             // So we don't get multiple events from both input and label when
             // clicked once.
-            Scheduler.get().scheduleDeferred(new ScheduledCommand() {
-
-                @Override
-                public void execute() {
-                    ignoreEvent = false;
-                }
+            Scheduler.get().scheduleDeferred(() -> {
+                ignoreEvent = false;
             });
 
             Boolean newValue = handleToggle();
