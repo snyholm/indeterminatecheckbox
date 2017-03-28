@@ -1,6 +1,6 @@
-package org.vaadin.sebastian.indeterminatecheckbox.testcomponents;
+package com.vaadin.sebastian.indeterminatecheckbox.testcomponents;
 
-import org.vaadin.sebastian.indeterminatecheckbox.IndeterminateCheckBox;
+import com.vaadin.sebastian.indeterminatecheckbox.IndeterminateCheckBox;
 
 import com.vaadin.data.util.BeanItem;
 import com.vaadin.ui.CssLayout;

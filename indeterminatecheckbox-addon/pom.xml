@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.vaadin.sebastian</groupId>
+	<groupId>org.vaadin.addons</groupId>
 	<artifactId>indeterminatecheckbox</artifactId>
 	<packaging>jar</packaging>
 	<name>IndeterminateCheckBox Add-on</name>
         
         <parent>
-            <groupId>org.vaadin.sebastian</groupId>
+            <groupId>org.vaadin.addons</groupId>
             <artifactId>indeterminatecheckbox-root</artifactId>
             <version>2.0.2-SNAPSHOT</version>
         </parent>
@@ -123,7 +123,7 @@
                             <!-- Package format version - do not change -->
                             <Vaadin-Package-Version>1</Vaadin-Package-Version>
                             <Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
-                            <Vaadin-Widgetsets>org.vaadin.sebastian.indeterminatecheckbox.WidgetSet</Vaadin-Widgetsets>
+                            <Vaadin-Widgetsets>com.vaadin.sebastian.indeterminatecheckbox.WidgetSet</Vaadin-Widgetsets>
                         </manifestEntries>
                     </archive>
                 </configuration>

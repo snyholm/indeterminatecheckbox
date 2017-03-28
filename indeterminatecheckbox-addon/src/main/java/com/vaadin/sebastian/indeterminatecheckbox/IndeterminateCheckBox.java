@@ -1,8 +1,8 @@
-package org.vaadin.sebastian.indeterminatecheckbox;
+package com.vaadin.sebastian.indeterminatecheckbox;
 
 import com.vaadin.ui.AbstractField;
-import org.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox.IndeterminateCheckBoxServerRpc;
-import org.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox.IndeterminateCheckBoxState;
+import com.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox.IndeterminateCheckBoxServerRpc;
+import com.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox.IndeterminateCheckBoxState;
 
 /**
  * A CheckBox with three states.

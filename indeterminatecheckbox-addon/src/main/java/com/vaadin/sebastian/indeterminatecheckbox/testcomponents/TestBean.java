@@ -1,4 +1,4 @@
-package org.vaadin.sebastian.indeterminatecheckbox.testcomponents;
+package com.vaadin.sebastian.indeterminatecheckbox.testcomponents;
 
 public class TestBean {
 

@@ -1,4 +1,4 @@
-package org.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox;
+package com.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox;
 
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.ScheduledCommand;
