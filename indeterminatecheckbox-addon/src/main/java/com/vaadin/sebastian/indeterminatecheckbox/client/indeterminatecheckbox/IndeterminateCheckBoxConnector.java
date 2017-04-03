@@ -1,6 +1,6 @@
-package org.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox;
+package com.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox;
 
-import org.vaadin.sebastian.indeterminatecheckbox.IndeterminateCheckBox;
+import com.vaadin.sebastian.indeterminatecheckbox.IndeterminateCheckBox;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Style.Display;

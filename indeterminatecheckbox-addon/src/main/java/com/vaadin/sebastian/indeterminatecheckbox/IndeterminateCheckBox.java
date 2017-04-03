@@ -1,13 +1,12 @@
-package org.vaadin.sebastian.indeterminatecheckbox;
+package com.vaadin.sebastian.indeterminatecheckbox;
 
-import org.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox.IndeterminateCheckBoxServerRpc;
-import org.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox.IndeterminateCheckBoxState;
-
+import com.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox.IndeterminateCheckBoxServerRpc;
+import com.vaadin.sebastian.indeterminatecheckbox.client.indeterminatecheckbox.IndeterminateCheckBoxState;
 import com.vaadin.ui.AbstractField;
 
 /**
  * A CheckBox with three states.
- * 
+ *
  * @author Sebastian Nyholm @ Vaadin Ltd.
  * @since January 2016
  * @version 2.0
@@ -35,13 +34,13 @@ public class IndeterminateCheckBox extends AbstractField<Boolean> {
         this(caption, false);
     }
 
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public IndeterminateCheckBox(String caption, Boolean initialState) {
         setCaption(caption);
         setValue(initialState);
         registerRpc(rpc);
 
         getState().value = initialState;
-
     }
 
     @Override
@@ -65,9 +64,9 @@ public class IndeterminateCheckBox extends AbstractField<Boolean> {
      * state. The order of the states are <code>false</code>,
      * <code>indeterminate</code>, <code>true</code>. The default value is
      * <code>false</code>; only the developer can set the indeterminate state.
-     * 
-     * @param isUserToggleable
-     *            Is the user allowed to toggle to the indeterminate state.
+     *
+     * @param isUserToggleable Is the user allowed to toggle to the
+     * indeterminate state.
      */
     public void setUserCanToggleIndeterminate(boolean isUserToggleable) {
         getState().isUserToggleable = isUserToggleable;
@@ -76,7 +75,7 @@ public class IndeterminateCheckBox extends AbstractField<Boolean> {
     /**
      * Returns <code>true</code> if the user can toggle into the indeterminate
      * state. See {@link #setUserCanToggleIndeterminate(boolean)}
-     * 
+     *
      * @return Is the user allowed to toggle to the indeterminate state.
      */
     public boolean isUserCanToggleIndetermine() {
@@ -85,6 +84,8 @@ public class IndeterminateCheckBox extends AbstractField<Boolean> {
 
     /**
      * The checkbox can never be empty.
+     *
+     * @return always false.
      */
     @Override
     public boolean isEmpty() {
